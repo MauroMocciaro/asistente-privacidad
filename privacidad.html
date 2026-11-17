@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · Asistente personal</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --texto: #1f2328;
+  --suave: #59636e;
+  --fondo: #ffffff;
+  --enlace: #0b5cad;
+  --borde: #d8dee4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --texto: #e6edf3;
+    --suave: #9198a1;
+    --fondo: #0d1117;
+    --enlace: #6cb6ff;
+    --borde: #30363d;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 36px 0 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borde);
+}
+
+a { color: var(--enlace); }
+
+li { margin-bottom: 8px; }
+
+code {
+  font-size: 0.85em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--borde);
+}
+
+.fecha, .bajada, .original, .volver { color: var(--suave); }
+.bajada { font-size: 1.1rem; margin-top: 0; }
+.original { font-size: 0.9rem; font-style: italic; }
+.volver { margin: 0 0 24px; font-size: 0.95rem; }
+.enlace { margin-top: 32px; font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+<p class="volver"><a href="./">← Asistente personal</a></p>
+
+<h1>Política de privacidad</h1>
+<p class="fecha">Última actualización: 17 de noviembre de 2026</p>
+
+<h2>Qué es esta app</h2>
+<p>
+  «Asistente personal» es un bot de Telegram de <strong>uso personal</strong>. No es un servicio abierto al público:
+  cada instalación corre en un equipo propio (por ejemplo, una Raspberry Pi) y atiende a una sola persona.
+  El bot entiende mensajes y notas de voz, y anota eventos, recordatorios, tareas, contactos y notas
+  en el Google Drive y el Google Calendar de esa persona, siempre después de que ella lo confirme.
+</p>
+
+<h2>Qué permisos de Google pide</h2>
+<ul>
+  <li>
+    <strong>Google Drive, solo los archivos que crea la app</strong> (<code>drive.file</code>).
+    La app crea una planilla llamada «Asistente · datos» y trabaja únicamente sobre ella.
+    No puede ver, leer ni modificar ningún otro archivo de tu Drive.
+  </li>
+  <li>
+    <strong>Eventos de Google Calendar</strong> (<code>calendar.events</code>).
+    La app crea los eventos que le pedís, con sus invitados, y lee tu agenda para mostrarte
+    lo que tenés en un día o un período. No cambia la configuración de tus calendarios ni a quién se comparten.
+  </li>
+</ul>
+<p>
+  Si además conectás una cuenta laboral, para esa cuenta se pide <strong>solo</strong> el permiso de eventos de Calendar,
+  nunca el de Drive.
+</p>
+
+<h2>Qué datos usa y dónde quedan</h2>
+<ul>
+  <li>
+    <strong>Tus datos quedan en tu propia cuenta de Google:</strong> los eventos en tu Calendar, y los recordatorios,
+    tareas, contactos, notas y la configuración en la planilla de tu Drive. No hay ninguna base de datos aparte.
+  </li>
+  <li>
+    <strong>En el equipo donde corre el bot</strong> se guardan solo la autorización de Google (para no pedírtela cada vez),
+    la configuración del bot y un registro técnico de funcionamiento. Ese registro puede incluir un fragmento
+    de un mensaje cuando ocurre un error, y sirve únicamente para arreglarlo.
+  </li>
+  <li>
+    Los pedidos que esperan tu confirmación se guardan en la memoria del bot y se pierden si el bot se reinicia.
+  </li>
+</ul>
+
+<h2>Con quién se comparten</h2>
+<ul>
+  <li>
+    <strong>Telegram:</strong> los mensajes que intercambiás con el bot pasan por Telegram, como cualquier chat.
+  </li>
+  <li>
+    <strong>OpenAI:</strong> para entender lo que pedís, el texto de tus mensajes se envía a la API de OpenAI,
+    y las notas de voz se envían para pasarlas a texto. Cuando hacés una consulta sobre tus contactos, notas o tareas,
+    también se envían los registros de la planilla necesarios para responderla. Tus eventos de Calendar no se envían a OpenAI.
+    OpenAI trata estos datos según su
+    <a href="https://openai.com/policies/privacy-policy/">política de privacidad</a>.
+  </li>
+</ul>
+<p>
+  No se comparte nada con nadie más. Los datos no se venden, no se usan para publicidad
+  y no se usan para ningún fin distinto de hacer funcionar el asistente para vos.
+</p>
+
+<h2>Uso limitado de los datos de Google</h2>
+<p>
+  El uso que hace esta app de la información recibida de las API de Google cumple con la
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos del usuario de los servicios de API de Google</a>,
+  incluidos los requisitos de uso limitado.
+</p>
+<p lang="en" class="original">
+  Asistente personal's use and transfer of information received from Google APIs to any other app will adhere to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+  including the Limited Use requirements.
+</p>
+
+<h2>Cómo quitar el acceso o borrar tus datos</h2>
+<ul>
+  <li>
+    Podés quitarle el acceso a la app en cualquier momento desde
+    <a href="https://myaccount.google.com/connections">las apps conectadas a tu cuenta de Google</a>.
+    Desde ese momento el bot no puede leer ni escribir nada en tu cuenta.
+  </li>
+  <li>
+    Para borrar tus datos, eliminá la planilla «Asistente · datos» de tu Drive y, si querés, los eventos de tu Calendar.
+  </li>
+  <li>
+    Para borrar lo que queda en el equipo donde corre el bot, pedile a quien lo administra que lo desinstale.
+    Así se eliminan la autorización, la configuración y el registro técnico.
+  </li>
+</ul>
+
+<h2>Cambios en esta política</h2>
+<p>
+  Si la app empieza a usar los datos de otra forma, se actualiza esta página y la fecha de arriba.
+</p>
+
+<h2>Contacto</h2>
+<p>
+  Por cualquier consulta sobre esta política, escribí al mail de contacto que figura en la pantalla
+  de autorización de Google de la app.
+</p>
+</main>
+</body>
+</html>

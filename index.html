@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asistente personal</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --texto: #1f2328;
+  --suave: #59636e;
+  --fondo: #ffffff;
+  --enlace: #0b5cad;
+  --borde: #d8dee4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --texto: #e6edf3;
+    --suave: #9198a1;
+    --fondo: #0d1117;
+    --enlace: #6cb6ff;
+    --borde: #30363d;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 36px 0 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borde);
+}
+
+a { color: var(--enlace); }
+
+li { margin-bottom: 8px; }
+
+code {
+  font-size: 0.85em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--borde);
+}
+
+.fecha, .bajada, .original, .volver { color: var(--suave); }
+.bajada { font-size: 1.1rem; margin-top: 0; }
+.original { font-size: 0.9rem; font-style: italic; }
+.volver { margin: 0 0 24px; font-size: 0.95rem; }
+.enlace { margin-top: 32px; font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+<h1>Asistente personal</h1>
+<p class="bajada">Un bot de Telegram de uso personal para anotar la agenda y los pendientes sin salir del chat.</p>
+
+<p>
+  Le escribís o le mandás un audio en lenguaje natural («mañana a las 10 reunión con Juan», «recordame llamar al banco el viernes»).
+  El bot te muestra lo que entendió y, cuando lo confirmás, lo guarda en tu propia cuenta de Google:
+</p>
+<ul>
+  <li><strong>Eventos</strong> en Google Calendar, con invitados si los nombrás.</li>
+  <li><strong>Recordatorios, tareas, contactos y notas</strong> en una planilla de tu Google Drive.</li>
+  <li><strong>Consultas de agenda</strong>, como «¿qué tengo la semana que viene?».</li>
+</ul>
+
+<p>
+  No es un servicio abierto al público: cada instalación corre en un equipo propio y atiende a una sola persona.
+</p>
+
+<p class="enlace"><a href="privacidad.html">Política de privacidad</a></p>
+</main>
+</body>
+</html>
